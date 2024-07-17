@@ -229,7 +229,7 @@ About Passkeys
             };
             console.log("triggering authentication with options", authenticationOptions);
             //const authentication = await navigator.credentials.get(authenticationOptions);
-            JsWebBridge.showMessageInNative(JSON.stringify(authenticationOptions,"usePasskey'));
+            JsWebBridge.showMessageInNative(JSON.stringify(authenticationOptions),"usePasskey");
             console.log("authentication");
             alert("Successful passkey authentication");
           } catch(e) {
