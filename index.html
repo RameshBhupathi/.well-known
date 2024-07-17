@@ -230,8 +230,8 @@ About Passkeys
             console.log("triggering authentication with options", authenticationOptions);
             //const authentication = await navigator.credentials.get(authenticationOptions);
             JsWebBridge.showMessageInNative(JSON.stringify(authenticationOptions),"usePasskey");
-            console.log("authentication");
-            alert("Successful passkey authentication");
+            console.log("Successful passkey authenticatio");
+            //alert("Successful passkey authentication");
           } catch(e) {
             const message = `error occurred during passkey authentication: ${e}`;
             console.error(message);
@@ -240,8 +240,8 @@ About Passkeys
       });
     })
       function updateFromNative(str){
-      console.log("received data "+str)
-      alert("received data "+str)
+      console.log("received data "+str);
+      alert("received data "+str);
     }
   </script>
 </body>
