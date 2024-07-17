@@ -218,14 +218,11 @@ About Passkeys
           crypto.getRandomValues(userId);
           try {
             const authenticationOptions = {
-              publicKey: {
                 challenge: challenge,
-                userVerification: document.getElementById("auth-user-verification").value
-              },
-              rp: {
-                  "id": "rameshbhupathi.github.io",
+                userVerification: document.getElementById("auth-user-verification").value,
+                  "rpId": "rameshbhupathi.github.io",
                   "name": "Passkey playground"
-              },
+
             };
             console.log("triggering authentication with options", authenticationOptions);
             //const authentication = await navigator.credentials.get(authenticationOptions);
