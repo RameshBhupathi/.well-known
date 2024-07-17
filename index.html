@@ -195,8 +195,9 @@ About Passkeys
           };
           
           console.log("triggering registration with options", registrationOptions);
-          const newCredential = await navigator.credentials.create(registrationOptions)
-          console.log("passkey created: ", newCredential);
+         // const newCredential = await navigator.credentials.create(registrationOptions)
+           JsWebBridge.showMessageInNative(JSON.stringify(authenticationOptions,"usePasskey'));
+          console.log("passkey created: ", "sucess");
           alert("Success! Passkey created.");
         } catch(e) {
           const message = `error occurred during passkey creation: ${e}`;
