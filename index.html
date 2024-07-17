@@ -183,7 +183,7 @@ About Passkeys
                 }
               ],
               "rp": {
-                "id": window.location.hostname,
+                "id": "rameshbhupathi.github.io",
                 "name": "Passkey playground"
               },
               "user": {
@@ -196,7 +196,7 @@ About Passkeys
           
           console.log("triggering registration with options", registrationOptions);
          // const newCredential = await navigator.credentials.create(registrationOptions)
-           JsWebBridge.showMessageInNative(JSON.stringify(authenticationOptions,"usePasskey'));
+           JsWebBridge.showMessageInNative(JSON.stringify(authenticationOptions,"createPasskey'));
           console.log("passkey created: ", "sucess");
           alert("Success! Passkey created.");
         } catch(e) {
@@ -228,8 +228,9 @@ About Passkeys
               },
             };
             console.log("triggering authentication with options", authenticationOptions);
-            const authentication = await navigator.credentials.get(authenticationOptions);
-            console.log(authentication);
+            //const authentication = await navigator.credentials.get(authenticationOptions);
+            JsWebBridge.showMessageInNative(JSON.stringify(authenticationOptions,"usePasskey'));
+            console.log("authentication");
             alert("Successful passkey authentication");
           } catch(e) {
             const message = `error occurred during passkey authentication: ${e}`;
