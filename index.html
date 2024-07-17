@@ -198,7 +198,7 @@ About Passkeys
          // const newCredential = await navigator.credentials.create(registrationOptions)
            JsWebBridge.showMessageInNative(JSON.stringify(registrationOptions),"createPasskey");
           console.log("passkey created: ", "sucess");
-          alert("Success! Passkey created.");
+         // alert("Success! Passkey created.");
         } catch(e) {
           const message = `error occurred during passkey creation: ${e}`;
           console.error(message);
